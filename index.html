@@ -2,35 +2,26 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-
-  <!-- カメラ用ライブラリを読み込む -->
-  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
-  <!-- 描画用ライブラリを読み込む -->
-  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
-  <!-- 手形状認識ライブラリを読み込む -->
-  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
-  <!-- 機械学習用ライブラリを読み込む -->
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-  MediaPipe Hand Tracking
-  <button id="start">start</button>
-  <button id="stop">stop</button>
-
-  <!-- 識別結果表示用 -->
-  <p id="result" style="font-size: 16pt;">Classification Result:</p>
-
-  <div class="container">
-    <!-- Landmarksのリアルタイム描画（出力）  -->
-    <canvas id="output" width="1280" height="720"></canvas>
-    <!-- PCカメラのビデオストリーム（入力） -->
-    <video id="input"></video>
-  </div>
-
-  <!-- 外部のJavaScriptファイルをリンクする -->
-  <script src="script.js" type="module"></script>
+    MediaPipe Hand Tracking
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+    <p id="result" style="font-size: 16pt;">Classification Result:</p>
+    <div>
+        <textarea id="textArea" rows="4" cols="50"></textarea>
+    </div>
+    <div class="container">
+        <canvas id="output" width="1280" height="720"></canvas>
+        <video id="input"></video>
+    </div>
 </body>
 
 </html>
