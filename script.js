@@ -84,3 +84,9 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
+document.getElementById("searchGoogle").addEventListener("click", function() {
+    const query = document.getElementById("textArea").value; // textareaのID
+    const googleSearchURL = "https://www.google.com/search?q=" + encodeURIComponent(query);
+    
+    window.open(googleSearchURL, "_blank"); // 新しいタブでGoogle検索を開く
+});

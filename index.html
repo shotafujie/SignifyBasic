@@ -2,26 +2,28 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
-    <script src="script.js" defer></script>
+  <meta charset="utf-8">
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
+  <script src="script.js" defer></script>
 </head>
 
 <body>
-    MediaPipe Hand Tracking
-    <button id="start">start</button>
-    <button id="stop">stop</button>
-    <p id="result" style="font-size: 16pt;">Classification Result:</p>
-    <div>
-        <textarea id="textArea" rows="4" cols="50"></textarea>
-    </div>
-    <div class="container">
-        <canvas id="output" width="1280" height="720"></canvas>
-        <video id="input"></video>
-    </div>
+  <h1>手話認識システム</h1>
+  認識
+  <button id="start">start</button>
+  <button id="stop">stop</button>
+  <p id="result" style="font-size: 16pt;">AIが考えた結果がここに提示されます</p>
+  <button id="searchGoogle">Googleで検索</button>
+  <div>
+    <textarea id="textArea" rows="4" cols="50"></textarea>
+  </div>
+  <div class="container">
+    <canvas id="output" width="1280" height="720"></canvas>
+    <video id="input"></video>
+  </div>
 </body>
 
 </html>
