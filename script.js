@@ -53,21 +53,148 @@ hands.onResults(async results => {
       const prediction = model.predict(inputData);
       const classId = prediction.argMax(-1).dataSync()[0];
       switch (classId) {
-        case 0:
-          lastRecognizedCharacter = 'お';
-          break;
-        case 1:
-          lastRecognizedCharacter = 'は';
-          break;
-        case 2:
-          lastRecognizedCharacter = 'よ';
-          break;
-        case 3:
-          lastRecognizedCharacter = 'う';
-          break;
+        case 'a':
+            lastRecognizedCharacter = 'あ';
+            break;
+        case 'i':
+            lastRecognizedCharacter = 'い';
+            break;
+        case 'u':
+            lastRecognizedCharacter = 'う';
+            break;
+        case 'e':
+            lastRecognizedCharacter = 'え';
+            break;
+        case 'o':
+            lastRecognizedCharacter = 'お';
+            break;
+        case 'ka':
+            lastRecognizedCharacter = 'か';
+            break;
+        case 'ki':
+            lastRecognizedCharacter = 'き';
+            break;
+        case 'ku':
+            lastRecognizedCharacter = 'く';
+            break;
+        case 'ke':
+            lastRecognizedCharacter = 'け';
+            break;
+        case 'ko':
+            lastRecognizedCharacter = 'こ';
+            break;
+        case 'sa':
+            lastRecognizedCharacter = 'さ';
+            break;
+        case 'shi':
+            lastRecognizedCharacter = 'し';
+            break;
+        case 'su':
+            lastRecognizedCharacter = 'す';
+            break;
+        case 'se':
+            lastRecognizedCharacter = 'せ';
+            break;
+        case 'so':
+            lastRecognizedCharacter = 'そ';
+            break;
+        case 'ta':
+            lastRecognizedCharacter = 'た';
+            break;
+        case 'chi':
+            lastRecognizedCharacter = 'ち';
+            break;
+        case 'tsu':
+            lastRecognizedCharacter = 'つ';
+            break;
+        case 'te':
+            lastRecognizedCharacter = 'て';
+            break;
+        case 'to':
+            lastRecognizedCharacter = 'と';
+            break;
+        case 'na':
+            lastRecognizedCharacter = 'な';
+            break;
+        case 'ni':
+            lastRecognizedCharacter = 'に';
+            break;
+        case 'nu':
+            lastRecognizedCharacter = 'ぬ';
+            break;
+        case 'ne':
+            lastRecognizedCharacter = 'ね';
+            break;
+        case 'no':
+            lastRecognizedCharacter = 'の';
+            break;
+        case 'ha':
+            lastRecognizedCharacter = 'は';
+            break;
+        case 'hi':
+            lastRecognizedCharacter = 'ひ';
+            break;
+        case 'fu':
+            lastRecognizedCharacter = 'ふ';
+            break;
+        case 'he':
+            lastRecognizedCharacter = 'へ';
+            break;
+        case 'ho':
+            lastRecognizedCharacter = 'ほ';
+            break;
+        case 'ma':
+            lastRecognizedCharacter = 'ま';
+            break;
+        case 'mi':
+            lastRecognizedCharacter = 'み';
+            break;
+        case 'mu':
+            lastRecognizedCharacter = 'む';
+            break;
+        case 'me':
+            lastRecognizedCharacter = 'め';
+            break;
+        case 'mo':
+            lastRecognizedCharacter = 'も';
+            break;
+        case 'ya':
+            lastRecognizedCharacter = 'や';
+            break;
+        case 'yu':
+            lastRecognizedCharacter = 'ゆ';
+            break;
+        case 'yo':
+            lastRecognizedCharacter = 'よ';
+            break;
+        case 'ra':
+            lastRecognizedCharacter = 'ら';
+            break;
+        case 'ri':
+            lastRecognizedCharacter = 'り';
+            break;
+        case 'ru':
+            lastRecognizedCharacter = 'る';
+            break;
+        case 're':
+            lastRecognizedCharacter = 'れ';
+            break;
+        case 'ro':
+            lastRecognizedCharacter = 'ろ';
+            break;
+        case 'wa':
+            lastRecognizedCharacter = 'わ';
+            break;
+        case 'wo':
+            lastRecognizedCharacter = 'を';
+            break;
+        case 'n':
+            lastRecognizedCharacter = 'ん';
+            break;
         default:
-          lastRecognizedCharacter = 'unknown';
-      }
+            lastRecognizedCharacter = 'unknown';
+    }
+
       resultElement.textContent = `Classification Result: ${lastRecognizedCharacter}`;
     }
   }
@@ -87,6 +214,6 @@ document.addEventListener('keydown', (event) => {
 document.getElementById("searchGoogle").addEventListener("click", function() {
     const query = document.getElementById("textArea").value; // textareaのID
     const googleSearchURL = "https://www.google.com/search?q=" + encodeURIComponent(query);
-    
+
     window.open(googleSearchURL, "_blank"); // 新しいタブでGoogle検索を開く
 });
